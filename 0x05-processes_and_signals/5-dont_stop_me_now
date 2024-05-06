@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 # This script kills a process using the command kill
+
 pid=$(pgrep -f beyond)
 kill $pid
