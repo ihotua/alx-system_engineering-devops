@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Shows all process including those without a TTY 
+# and those without a controlling TTY
+# Shows the process hierarchy
+# Shows the process in a user oriented-format
+
+ps -a -x -u -f
+
