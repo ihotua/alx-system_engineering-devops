@@ -2,4 +2,3 @@
 # This is a script that pings an IP address passed as an argument
 [ $# -ne 1 ] && { echo "Usage: $0 {IP_ADDRESS}"; exit 1; }
 ping -c 5 "$1"
-
