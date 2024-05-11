@@ -1,2 +1,2 @@
 #!/usr/bin/env ruby
-puts ARGV[0].scan(/(?<=from:|to:|msg:)[^\]]*/).join(',')
+puts ARGV[0].scan(/(?<=from:|to|flags:|msg:)[^\]]*/).join(',')
