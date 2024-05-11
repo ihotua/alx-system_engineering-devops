@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This scriot uses an until loop to display "Best School" 10 times
+k=0
+
+until [ $k -eq 10 ]
+do
+    echo "Best School"
+    ((k++))
+done
