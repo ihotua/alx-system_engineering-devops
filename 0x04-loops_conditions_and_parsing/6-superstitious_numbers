@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# This script uses a while loop to iterate from 1 to 20
+k=1
+
+while [ $k -le 20 ]
+do
+    echo $k
+
+    case $k in
+        4)
+            echo "bad luck from China"
+            ;;
+        9)
+            echo "bad luck from Japan"
+            ;;
+        17)
+            echo "bad luck from Italy"
+            ;;
+        *)
+            ;;
+    esac
+
+    ((k++))
+done
