@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # This script uses a for loop to iterate 
 # through files in the current directory
-for k in *
-do
-    echo "$k" | cut -d '-' -f 2
+for k in *; do
+    echo "$k" | cut -d '-' -f 2;
 done
