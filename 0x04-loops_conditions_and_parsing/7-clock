@@ -5,8 +5,6 @@ minutes=1
 
 while [ $hours -le 12 ] && [ $minutes -le 59 ]
 do
-    printf "%01d:%01d\n" $hours $minutes
-
     ((minutes++))
 
     if [ $minutes -eq 60 ]; then
