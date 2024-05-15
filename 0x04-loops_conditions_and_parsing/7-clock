@@ -1,15 +1,16 @@
 #!/usr/bin/env bash
 # This script uses a while loop to iterate through hour and minutes
-h=0
-m=1
+hours=0
+minutes=1
 
-while [ $h -le 12 ] && [ $m -le 59 ]
+while [ $hours -le 12 ] && [ $minutes -le 59 ]
 do
-    printf $h $m
-    ((m++))
+    printf "%02d:%02d\n" $hours $minutes
 
-    if [ $m -eq 60 ]; then
-        m=1
-        ((h++))
+    ((minutes++))
+
+    if [ $minutes -eq 60 ]; then
+        minutes=1
+        ((hours++))
     fi
 done | head -n 70
