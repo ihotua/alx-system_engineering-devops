@@ -3,5 +3,5 @@
 # through files in the current directory
 for k in *
 do
-    echo "$k" | cut -d '-' -f 2-;
+    echo "$k" | cut -d '-' -f 2
 done
