@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 # This script uses a while loop to read the file line by line
-while IFS=: read -r username _ uid gid gecos home shell
+
+IFS=":"
+
+while read -r username password user_id group_id user_info home_directory shell
 do
-    IFS=',' read -r _ _ _ info <<< "$gecos"
-
-    IFS=: read -r _ password _ <<< "$(grep "^$username:" /etc/shadow)"
-
-    echo "The user $username is part of the group $gid gang, lives in $home and rides $shell."
-    echo "User ID's place is protected by the passcode $password, more info about the user here: $info"
+  echo "The user $username is part of the $group_id gang, lives in $home_directory and rides $shell. USER ID's place is protected by the passcode $password, more info about the user here: $user_info"
 done < /etc/passwd
