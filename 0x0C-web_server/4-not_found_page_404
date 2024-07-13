@@ -1,4 +1,4 @@
-i#!/usr/bin/env bash
+#!/usr/bin/env bash
 # Installs nginx web server
 
 echo -e "Updating and installing Nginx.\n"
